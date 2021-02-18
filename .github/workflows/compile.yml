@@ -18,6 +18,7 @@ jobs:
         run: |
           git config --global user.name 'lirc572'
           git config --global user.email 'lirc572@users.noreply.github.com'
-          git commit -am "dist"
+          git add resume.pdf
+          git commit -m "dist"
           git checkout -B dist
           git push origin dist --force
