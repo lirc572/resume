@@ -1,0 +1,23 @@
+name: Compile
+on:
+  push:
+    branches:
+      - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+          latexmk_use_xelatex: true
+      - name: Push to dist branch
+        run: |
+          git config --global user.name 'lirc572'
+          git config --global user.email 'lirc572@users.noreply.github.com'
+          git commit -am "dist"
+          git checkout -B dist
+          git push origin dist --force
