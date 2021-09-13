@@ -49,8 +49,17 @@ export default () => (
       <Text style={styles.subtitle}>Jedi Master</Text>
     </View>
     <View style={styles.linkColumn}>
+      <Link href="https://lukeskywalker.com" style={styles.link}>
+        Website: lukeskywalker.com
+      </Link>
       <Link href="mailto:luke@theforce.com" style={styles.link}>
-        luke@theforce.com
+        Email: luke@theforce.com
+      </Link>
+      <Link href="https://www.linkedin.com/in/lukeskywalker/" style={styles.link}>
+        LinkedIn: lukeskywalker
+      </Link>
+      <Link href="https://github.com/lukeskywalker/" style={styles.link}>
+        GitHub: lukeskywalker
       </Link>
     </View>
   </View>

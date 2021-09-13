@@ -1,23 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import pdf from '@react-pdf/renderer';
-import MyDocument from './components/MyDocument';
-
-const { PDFViewer } = pdf;
+import Home from './pages/Home';
+import A4Portrait from './pages/A4Portrait';
+import A4Landscape from './pages/A4Landscape';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 const App = () => (
-  <div style={{
-    width: '100vw',
-    height: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'stretch',
-  }}>
-    <PDFViewer style={{ flex: 1 }}>
-      <MyDocument />
-    </PDFViewer>
-  </div>
+  <Router>
+    <div>
+      <Switch>
+        <Route path="/portrait">
+          <A4Portrait />
+        </Route>
+        <Route path="/landscape">
+          <A4Landscape />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </div>
+  </Router>
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));

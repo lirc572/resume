@@ -1,5 +1,9 @@
 import React from 'react';
 import pdf from '@react-pdf/renderer';
+import Header from './Header';
+import Skills from './Skills';
+import Education from './Education';
+import Experience from './Experience';
 
 const {
   Text,
@@ -7,14 +11,8 @@ const {
   Page,
   View,
   Image,
-  Document,
   StyleSheet,
 } = pdf;
-
-import Header from './Header';
-import Skills from './Skills';
-import Education from './Education';
-import Experience from './Experience';
 
 const styles = StyleSheet.create({
   page: {
@@ -78,7 +76,7 @@ Font.register({
   src: `https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf`,
 });
 
-const Resume = props => (
+export default props => (
   <Page {...props} style={styles.page}>
     <Header />
     <View style={styles.container}>
@@ -95,18 +93,3 @@ const Resume = props => (
     <Text style={styles.footer}>This IS the candidate you are looking for</Text>
   </Page>
 );
-
-export default function MyDocument() {
-  return (
-    <Document
-      author="Luke Skywalker"
-      keywords="awesome, resume, start wars"
-      subject="The resume of Luke Skywalker"
-      title="Resume"
-    >
-      <Resume size="A4" />
-      <Resume orientation="landscape" size="A4" />
-      <Resume size={[380, 1250]} />
-    </Document>
-  );
-};
