@@ -15,9 +15,9 @@ export default () => (
   }}>
     <PDFViewer style={{ flex: 1 }}>
       <Document
-        author="Luke Skywalker"
-        keywords="awesome, resume, start wars"
-        subject="The resume of Luke Skywalker"
+        author="Li Ruochen"
+        keywords="lirc572, resume"
+        subject="The resume of Li Ruochen"
         title="Resume"
       >
         <Resume size="A4" />

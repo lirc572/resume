@@ -17,12 +17,14 @@ export default () => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'stretch',
-      backgroundImage: 'linear-gradient(to right, #a78bfa, #f472b6, #f87171)'
+      background: '#43c6ac',
+      backgroundImage: 'linear-gradient(to right, #43c6ac, #f8ffae)',
     }}>
       <div style={{
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
+        color: '#254833',
       }}>
         <h1>Ruochen's Resume</h1>
       </div>
