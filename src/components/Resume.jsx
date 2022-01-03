@@ -4,6 +4,7 @@ import Header from './Header';
 import Skills from './Skills';
 import Education from './Education';
 import Experience from './Experience';
+import Projects from './Projects';
 
 const {
   Text,
@@ -21,22 +22,27 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
+    paddingTop: 10,
     '@media max-width: 400': {
       flexDirection: 'column',
     },
   },
-  image: {
-    marginBottom: 10,
-  },
   leftColumn: {
     flexDirection: 'column',
     width: 170,
-    paddingTop: 30,
-    paddingRight: 15,
+    paddingRight: 10,
     '@media max-width: 400': {
       width: '100%',
       paddingRight: 0,
     },
+    '@media orientation: landscape': {
+      width: 200,
+    },
+  },
+  rightColumn: {
+    flex: 1,
+    paddingLeft: 10,
+    flexDirection: 'column',
     '@media orientation: landscape': {
       width: 200,
     },
@@ -81,15 +87,14 @@ export default props => (
     <Header />
     <View style={styles.container}>
       <View style={styles.leftColumn}>
-        <Image
-          src="https://avatars.githubusercontent.com/u/34601854?v=4"
-          style={styles.image}
-        />
         <Education />
         <Skills />
       </View>
-      <Experience />
+      <View style={styles.rightColumn}>
+        <Experience />
+        <Projects />
+      </View>
     </View>
-    <Text style={styles.footer}>This IS the candidate you are looking for</Text>
+    {/* <Text style={styles.footer}>This IS the candidate you are looking for</Text> */}
   </Page>
 );

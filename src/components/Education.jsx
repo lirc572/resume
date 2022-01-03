@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
 export default () => (
   <View style={styles.container}>
     <Title>Education</Title>
-    <Text style={styles.school}>Jedi Academy</Text>
-    <Text style={styles.degree}>Jedi Master</Text>
-    <Text style={styles.candidate}>A long, long time ago</Text>
+    <Text style={styles.school}>National University of Singapore (NUS)</Text>
+    <Text style={styles.degree}>BComp (Computer Science)</Text>
+    <Text style={styles.candidate}>2019-Present</Text>
   </View>
 );

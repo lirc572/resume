@@ -36,11 +36,33 @@ const Skills = () => (
   <View>
     <Title>Skills</Title>
     <SkillEntry
-      name="Combat Abilities"
+      name="Programming Languages"
       skills={[
-        'Completed Jedi Master training and built a lightsaber from scratch in order to do battle against the Empire',
-        'Defeated the Rancor and rescued Princess Leia from Jabba the Hutt',
-        'Competent fighter pilot as well as an excelent shot with nearly any weapon',
+        'JavaScript/TypeScript, Python, C/C++, Golang, Java, PHP, Lua',
+      ]}
+    />
+    <SkillEntry
+      name="Frontend"
+      skills={[
+        'HTML, CSS, jQuery, React, Vue, Svelte',
+        'Tailwind CSS, D3.js, GraphQL',
+      ]}
+    />
+    <SkillEntry
+      name="Backend"
+      skills={[
+        'Node.js, Deno, Flask, Django, WordPress',
+        'MySQL, MongoDB, CouchDB',
+        'Nginx, Apache, Caddy',
+      ]}
+    />
+    <SkillEntry
+      name="Others"
+      skills={[
+        'Docker, Nginx, Linux, Git, CMake',
+        'GitHub Actions, Travis CI, CircleCI, Drone.io',
+        'TensorFlow, Keras, Scikit-learn, Pandas, NumPy',
+        'FPGA, ESP32, LVGL',
       ]}
     />
   </View>

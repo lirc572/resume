@@ -10,6 +10,7 @@ import List, { Item } from './List';
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     '@media max-width: 400': {
       paddingTop: 10,
       paddingLeft: 0,
@@ -61,22 +62,14 @@ const styles = StyleSheet.create({
     textDecoration: 'none',
     fontFamily: 'Lato Bold',
   },
-  position: {
-    marginLeft: 2,
-    fontSize: 11,
-    color: 'black',
-    textDecoration: 'none',
-    fontFamily: 'Lato Bold',
-  },
 });
 
-const ExperienceEntry = ({ company, link, details, position, date }) => {
+const ExperienceEntry = ({ company, link, details, date }) => {
   return (
     <View style={styles.entryContainer}>
       <View style={styles.headerContainer}>
         <View style={styles.leftColumn}>
           <Link href={link} style={styles.company}>{company}</Link>
-          <Text style={styles.position}>| {position}</Text>
         </View>
         <View style={styles.rightColumn}>
           <Text style={styles.date}>{date}</Text>
@@ -93,42 +86,58 @@ const ExperienceEntry = ({ company, link, details, position, date }) => {
   );
 };
 
-const experienceData = [
+const projectData = [
   {
-    company: 'Bridges For Enterprise',
-    link: 'https://www.bridgesforenterprise.com',
-    position: 'Technology Associate',
-    date: 'Nov 2020 - Present',
+    company: 'OmniShoes',
+    link: 'https://github.com/OmniShoes',
+    date: 'Oct 2021 - Nov 2021',
     details: [
-      'Developed BfE Directory, an interactive org-chart to visualize the structure of BfE',
-      'Led a team to develop a startup-mentor matching platform for BfE operations managers',
+      'A smart shoes system that uses machine learning for activity detection and tracking',
+      'I developed an LSTM based model for activity detection, a distributed machine learning system for the application, and a PWA for data collection from sensors on the shoes',
     ],
   },
   {
-    company: 'Temasek Laboratories @ NUS',
-    position: 'Student Researcher',
-    date: 'Feb 2021 - Present',
+    company: 'SPA Evaluator',
+    link: 'https://xn--qck0d2a9as9305fp4vawl8a6kza.ml',
+    date: 'Dec 2021',
     details: [
-      'Conducted fault tolerant control related research on UAV platforms',
-      'Created an ML model for the motor propeller system',
+      'A full-stack application that evaluates queries about a code snippet using a static program analyzer, with OCR support',
+      'Developed with Deno, Nano JSX and Tesseract.js, deployed as a single Docker container on Heroku',
+    ],
+  },
+  {
+    company: 'Homital',
+    link: 'https://github.com/Homital',
+    date: 'May 2020 - Aug 2020',
+    details: [
+      'A smart home system where users control smart appliances from a mobile app',
+      'I developed the hardware, backend, as well as part of the frontend',
+    ],
+  },
+  {
+    company: 'NECPU',
+    link: 'https://github.com/lirc572/NECPU',
+    date: 'Mar 2020 - Apr 2020',
+    details: [
+      'A 32-bit CPU written in Verilog, with assembler and disassembler',
+      'Developed as an FPGA soft core for a game written in Assembly',
     ],
   },
 ];
 
-const Experience = () => (
+const Projects = () => (
   <View style={styles.container}>
-    <Title>Experience</Title>
-    {experienceData.map(({ company, link, date, details, position }) => (
+    <Title>Projects</Title>
+    {projectData.map(({ company, link, date, details }) => (
       <ExperienceEntry
         company={company}
         link={link}
         date={date}
         details={details}
-        key={company + position}
-        position={position}
+        key={company}
       />
     ))}
   </View>
 );
 
-export default Experience;
+export default Projects;
