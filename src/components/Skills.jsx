@@ -19,10 +19,16 @@ const styles = StyleSheet.create({
     fontSize: 10,
     marginBottom: 10,
   },
+  entryContainer: {
+    marginBottom: 10,
+    '@media min-width: 800': {
+      marginBottom: 4,
+    },
+  },
 });
 
 const SkillEntry = ({ name, skills }) => (
-  <View>
+  <View style={styles.entryContainer}>
     <Text style={styles.title}>{name}</Text>
     <List>
       {skills.map((skill, i) => (
@@ -32,39 +38,49 @@ const SkillEntry = ({ name, skills }) => (
   </View>
 );
 
+const skillData = [
+  {
+    name: 'Programming Languages',
+    skills: [
+      'JavaScript/TypeScript, Python, C/C++, Golang, Java, PHP, Lua',
+    ],
+  },
+  {
+    name: 'Frontend',
+    skills: [
+      'HTML, CSS, jQuery, React, Vue, Svelte',
+      'Tailwind CSS, D3.js, GraphQL',
+    ],
+  },
+  {
+    name: 'Backend',
+    skills: [
+      'Node.js, Deno, Flask, Django, WordPress',
+      'MySQL, MongoDB, CouchDB',
+      'Nginx, Apache, Caddy',
+    ],
+  },
+  {
+    name: 'Others',
+    skills: [
+      'Docker, Nginx, Linux, Git, CMake',
+      'GitHub Actions, Travis CI, CircleCI, Drone.io',
+      'TensorFlow, Keras, Scikit-learn, Pandas, NumPy',
+      'FPGA, ESP32, LVGL',
+    ],
+  },
+];
+
 const Skills = () => (
   <View>
     <Title>Skills</Title>
-    <SkillEntry
-      name="Programming Languages"
-      skills={[
-        'JavaScript/TypeScript, Python, C/C++, Golang, Java, PHP, Lua',
-      ]}
-    />
-    <SkillEntry
-      name="Frontend"
-      skills={[
-        'HTML, CSS, jQuery, React, Vue, Svelte',
-        'Tailwind CSS, D3.js, GraphQL',
-      ]}
-    />
-    <SkillEntry
-      name="Backend"
-      skills={[
-        'Node.js, Deno, Flask, Django, WordPress',
-        'MySQL, MongoDB, CouchDB',
-        'Nginx, Apache, Caddy',
-      ]}
-    />
-    <SkillEntry
-      name="Others"
-      skills={[
-        'Docker, Nginx, Linux, Git, CMake',
-        'GitHub Actions, Travis CI, CircleCI, Drone.io',
-        'TensorFlow, Keras, Scikit-learn, Pandas, NumPy',
-        'FPGA, ESP32, LVGL',
-      ]}
-    />
+    {skillData.map(({ name, skills }) => (
+      <SkillEntry
+        name={name}
+        skills={skills}
+        key={name}
+      />
+    ))}
   </View>
 );
 

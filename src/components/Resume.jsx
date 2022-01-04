@@ -35,30 +35,11 @@ const styles = StyleSheet.create({
       width: '100%',
       paddingRight: 0,
     },
-    '@media orientation: landscape': {
-      width: 200,
-    },
   },
   rightColumn: {
     flex: 1,
     paddingLeft: 10,
     flexDirection: 'column',
-    '@media orientation: landscape': {
-      width: 200,
-    },
-  },
-  footer: {
-    fontSize: 12,
-    fontFamily: 'Lato Bold',
-    textAlign: 'center',
-    marginTop: 15,
-    paddingTop: 5,
-    borderWidth: 3,
-    borderColor: 'gray',
-    borderStyle: 'dashed',
-    '@media orientation: landscape': {
-      marginTop: 10,
-    },
   },
 });
 
@@ -95,6 +76,5 @@ export default props => (
         <Projects />
       </View>
     </View>
-    {/* <Text style={styles.footer}>This IS the candidate you are looking for</Text> */}
   </Page>
 );

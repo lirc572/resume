@@ -18,6 +18,9 @@ const styles = StyleSheet.create({
   },
   entryContainer: {
     marginBottom: 10,
+    '@media min-width: 800': {
+      marginBottom: 4,
+    },
   },
   date: {
     fontSize: 11,
@@ -45,6 +48,9 @@ const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: 'row',
     marginBottom: 10,
+    '@media min-width: 800': {
+      marginBottom: 4,
+    },
   },
   leftColumn: {
     flexDirection: 'row',
@@ -93,7 +99,8 @@ const projectData = [
     date: 'Oct 2021 - Nov 2021',
     details: [
       'A smart shoes system that uses machine learning for activity detection and tracking',
-      'I developed an LSTM based model for activity detection, a distributed machine learning system for the application, and a PWA for data collection from sensors on the shoes',
+      'Tech stack: Docker, Spring Framework, MySQL, Tensorflow, React, CC2650',
+      'I developed the LSTM based model for activity detection, a distributed machine learning system for the application, and a PWA for data collection from CC2650 sensor tag on the shoes',
     ],
   },
   {
@@ -111,6 +118,7 @@ const projectData = [
     date: 'May 2020 - Aug 2020',
     details: [
       'A smart home system where users control smart appliances from a mobile app',
+      'Tech stack: Node.js, Express, MongoDB, Vue.js, ESP8266',
       'I developed the hardware, backend, as well as part of the frontend',
     ],
   },

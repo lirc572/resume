@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
   },
   entryContainer: {
     marginBottom: 10,
+    '@media min-width: 800': {
+      marginBottom: 4,
+    },
   },
   date: {
     fontSize: 11,
@@ -44,6 +47,9 @@ const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: 'row',
     marginBottom: 10,
+    '@media min-width: 800': {
+      marginBottom: 4,
+    },
   },
   leftColumn: {
     flexDirection: 'row',
