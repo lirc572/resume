@@ -10,11 +10,11 @@ const styles = StyleSheet.create({
   },
   bulletPoint: {
     width: 10,
-    fontSize: 10,
+    fontSize: 11,
   },
   itemContent: {
     flex: 1,
-    fontSize: 10,
+    fontSize: 11,
     fontFamily: 'Lato',
   },
 });

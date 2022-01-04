@@ -11,18 +11,16 @@ import List, { Item } from './List';
 const styles = StyleSheet.create({
   title: {
     fontFamily: 'Lato Bold',
-    fontSize: 11,
+    fontSize: 14,
     marginBottom: 10,
-  },
-  skills: {
-    fontFamily: 'Lato',
-    fontSize: 10,
-    marginBottom: 10,
+    '@media min-width: 800': {
+      marginBottom: 4,
+    },
   },
   entryContainer: {
     marginBottom: 10,
     '@media min-width: 800': {
-      marginBottom: 4,
+      marginBottom: 0,
     },
   },
 });

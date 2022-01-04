@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     },
   },
   date: {
-    fontSize: 11,
+    fontSize: 10,
     fontFamily: 'Lato Italic',
   },
   detailContainer: {
@@ -36,13 +36,6 @@ const styles = StyleSheet.create({
   detailRightColumn: {
     flexDirection: 'column',
     flexGrow: 9,
-  },
-  bulletPoint: {
-    fontSize: 10,
-  },
-  details: {
-    fontSize: 10,
-    fontFamily: 'Lato',
   },
   headerContainer: {
     flexDirection: 'row',
@@ -62,14 +55,14 @@ const styles = StyleSheet.create({
     justifySelf: 'flex-end',
   },
   company: {
-    fontSize: 11,
+    fontSize: 12,
     color: 'black',
     textDecoration: 'none',
     fontFamily: 'Lato Bold',
   },
   position: {
     marginLeft: 2,
-    fontSize: 11,
+    fontSize: 12,
     color: 'black',
     textDecoration: 'none',
     fontFamily: 'Lato Bold',

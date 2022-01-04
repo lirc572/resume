@@ -6,7 +6,7 @@ const { Text, StyleSheet } = pdf;
 const styles = StyleSheet.create({
   title: {
     fontFamily: 'Lato Bold',
-    fontSize: 14,
+    fontSize: 18,
     marginBottom: 10,
     textTransform: 'uppercase',
   },
