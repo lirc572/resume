@@ -61,7 +61,7 @@ const skillData = [
   {
     name: 'Others',
     skills: [
-      'Docker, Nginx, Linux, Git, CMake',
+      'Docker, Linux, Git, CMake',
       'GitHub Actions, Travis CI, CircleCI, Drone.io',
       'TensorFlow, Keras, Scikit-learn, Pandas, NumPy',
       'FPGA, ESP32, LVGL',
