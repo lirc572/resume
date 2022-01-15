@@ -96,20 +96,21 @@ const experienceData = [
   {
     company: 'Bridges For Enterprise',
     link: 'https://www.bridgesforenterprise.com',
-    position: 'Technology Associate',
+    position: 'Project Lead',
     date: 'Nov 2020 - Present',
     details: [
-      'Developed BfE Directory, an interactive org-chart to visualize the structure of BfE',
+      'Developed BfE Directory, an interactive org-chart to visualize the structure of BfE, with WordPress',
       'Led a team to develop a startup-mentor matching platform for BfE operations managers',
     ],
   },
   {
     company: 'Temasek Laboratories @ NUS',
+    link: 'https://temasek-labs.nus.edu.sg',
     position: 'Student Researcher',
     date: 'Feb 2021 - Present',
     details: [
       'Conducted fault tolerant control related research on UAV platforms',
-      'Created an ML model for the motor propeller system',
+      'Created an LSTM based prediction model for the motor propeller system',
     ],
   },
 ];
