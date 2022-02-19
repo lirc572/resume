@@ -116,12 +116,12 @@ const projectData = [
     ],
   },
   {
-    company: 'NECPU',
-    link: 'https://github.com/lirc572/NECPU',
-    date: 'Mar 2020 - Apr 2020',
+    company: 'Covid-Polygraph',
+    link: 'https://github.com/Team2333',
+    date: 'Jan 2022 - Jan 2022',
     details: [
-      'A 32-bit CPU written in Verilog, with assembler and disassembler',
-      'Developed as an FPGA soft core for a game written in Assembly',
+      'A Covid-19 fact checking tool built on top of BERT and transformers-interpret',
+      'I worked on the NLP model, the frontend, as well as a CI/CD pipeline for the backend',
     ],
   },
 ];

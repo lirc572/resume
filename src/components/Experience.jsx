@@ -99,8 +99,8 @@ const experienceData = [
     position: 'Project Lead',
     date: 'Nov 2020 - Present',
     details: [
-      'Developed BfE Directory, an interactive org-chart to visualize the structure of BfE, with WordPress',
       'Led a team to develop a startup-mentor matching platform for BfE operations managers',
+      'Led a team to develop an application portal to manage applications of startups and volunteers',
     ],
   },
   {
