@@ -51,7 +51,7 @@ export default () => {
         alignItems: 'center',
         padding: '0.5rem',
       }}>
-        Built with <a style={linkStyle} href="https://reactjs.org/">React</a>, <a style={linkStyle} href="https://vitejs.dev/">Vite</a>, and <a style={linkStyle} href="https://react-pdf.org/">React-pdf</a>.
+        Built with <a style={linkStyle} href="https://reactjs.org/">React</a>, <a style={linkStyle} href="https://vitejs.dev/">Vite</a>, and <a style={linkStyle} href="https://react-pdf.org/">React-pdf</a>. View <a style={linkStyle} href="https://github.com/lirc572/resume">source</a>
       </div>
     </div>
   );
