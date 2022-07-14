@@ -24,7 +24,7 @@ const experienceData = [
     date: 'May 2022 - Present',
     details: [
       'Implementation of cryptographic algorithms for cellular network',
-      'Simulation of trust based networking',
+      'Simulation of trust based network',
     ],
   },
   {
