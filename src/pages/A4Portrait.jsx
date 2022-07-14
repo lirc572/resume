@@ -1,6 +1,7 @@
 import React from 'react';
 import pdf from '@react-pdf/renderer';
 import Resume from '../components/Resume';
+import { StylesContext, styles } from '../styles';
 
 const { PDFViewer, Document } = pdf;
 
@@ -20,7 +21,9 @@ export default () => (
         subject="The resume of Li Ruochen"
         title="Resume"
       >
-        <Resume size="A4" />
+        <StylesContext.Provider value={styles}>
+          <Resume size="A4" />
+        </StylesContext.Provider>
       </Document>
     </PDFViewer>
   </div>

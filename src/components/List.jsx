@@ -1,31 +1,41 @@
 import React from 'react';
 import pdf from '@react-pdf/renderer';
+import { StylesContext } from '../styles';
 
 const { Text, View, StyleSheet } = pdf;
 
-const styles = StyleSheet.create({
-  item: {
-    flexDirection: 'row',
-    marginBottom: 5,
-  },
-  bulletPoint: {
-    width: 10,
-    fontSize: 11,
-  },
-  itemContent: {
-    flex: 1,
-    fontSize: 11,
-    fontFamily: 'Lato',
-  },
-});
+const List = ({ children }) => {
+  return (
+    <View>
+      {children}
+    </View>
+  );
+}
 
-const List = ({ children }) => children;
+export const Item = ({ children }) => {
+  const globalStyles = React.useContext(StylesContext);
 
-export const Item = ({ children }) => (
-  <View style={styles.item}>
-    <Text style={styles.bulletPoint}>•</Text>
-    <Text style={styles.itemContent}>{children}</Text>
-  </View>
-);
+  const styles = StyleSheet.create({
+    item: {
+      flexDirection: 'row',
+      marginBottom: 4,
+    },
+    bulletPoint: {
+      ...globalStyles.bodyText,
+      width: 10,
+    },
+    itemContent: {
+      ...globalStyles.bodyText,
+      flex: 1,
+    },
+  });
+
+  return (
+    <View style={styles.item}>
+      <Text style={styles.bulletPoint}>•</Text>
+      <Text style={styles.itemContent}>{children}</Text>
+    </View>
+  );
+}
 
 export default List;

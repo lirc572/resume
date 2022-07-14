@@ -2,92 +2,15 @@
 
 import React from 'react';
 import pdf from '@react-pdf/renderer';
+import Title from './Title';
+import List, { Item } from './List';
+import { StylesContext } from '../styles';
 
 const { Link, Text, View, StyleSheet } = pdf;
 
-import Title from './Title';
-import List, { Item } from './List';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    '@media max-width: 400': {
-      paddingTop: 10,
-      paddingLeft: 0,
-    },
-  },
-  entryContainer: {
-    marginBottom: 10,
-    '@media min-width: 800': {
-      marginBottom: 4,
-    },
-  },
-  date: {
-    fontSize: 10,
-    fontFamily: 'Lato Italic',
-  },
-  detailContainer: {
-    flexDirection: 'row',
-  },
-  detailLeftColumn: {
-    flexDirection: 'column',
-    marginLeft: 10,
-    marginRight: 10,
-  },
-  detailRightColumn: {
-    flexDirection: 'column',
-    flexGrow: 9,
-  },
-  headerContainer: {
-    flexDirection: 'row',
-    marginBottom: 10,
-    '@media min-width: 800': {
-      marginBottom: 4,
-    },
-  },
-  leftColumn: {
-    flexDirection: 'row',
-    flexGrow: 9,
-  },
-  rightColumn: {
-    flexDirection: 'column',
-    flexGrow: 1,
-    alignItems: 'flex-end',
-    justifySelf: 'flex-end',
-  },
-  company: {
-    fontSize: 14,
-    color: 'black',
-    textDecoration: 'none',
-    fontFamily: 'Lato Bold',
-  },
-});
-
-const ExperienceEntry = ({ company, link, details, date }) => {
-  return (
-    <View style={styles.entryContainer}>
-      <View style={styles.headerContainer}>
-        <View style={styles.leftColumn}>
-          <Link href={link} style={styles.company}>{company}</Link>
-        </View>
-        <View style={styles.rightColumn}>
-          <Text style={styles.date}>{date}</Text>
-        </View>
-      </View>
-      <List>
-        {details.map((detail, i) => (
-          <Item key={i} style={styles.detailContainer}>
-            {detail}
-          </Item>
-        ))}
-      </List>
-    </View>
-  );
-};
-
 const projectData = [
   {
-    company: 'OmniShoes',
+    project: 'OmniShoes',
     link: 'https://github.com/OmniShoes',
     date: 'Oct 2021 - Nov 2021',
     details: [
@@ -97,7 +20,7 @@ const projectData = [
     ],
   },
   {
-    company: 'SPA Evaluator',
+    project: 'SPA Evaluator',
     link: 'https://xn--qck0d2a9as9305fp4vawl8a6kza.ml',
     date: 'Dec 2021',
     details: [
@@ -106,7 +29,7 @@ const projectData = [
     ],
   },
   {
-    company: 'Homital',
+    project: 'Homital',
     link: 'https://github.com/Homital',
     date: 'May 2020 - Aug 2020',
     details: [
@@ -116,7 +39,7 @@ const projectData = [
     ],
   },
   {
-    company: 'Covid-Polygraph',
+    project: 'Covid-Polygraph',
     link: 'https://github.com/Team2333',
     date: 'Jan 2022 - Jan 2022',
     details: [
@@ -126,19 +49,91 @@ const projectData = [
   },
 ];
 
-const Projects = () => (
-  <View style={styles.container}>
-    <Title>Projects</Title>
-    {projectData.map(({ company, link, date, details }) => (
-      <ExperienceEntry
-        company={company}
-        link={link}
-        date={date}
-        details={details}
-        key={company}
-      />
-    ))}
-  </View>
-);
+const ExperienceEntry = ({ project, link, details, date }) => {
+  const globalStyles = React.useContext(StylesContext);
+
+  const styles = StyleSheet.create({
+    container: {
+      ...globalStyles.entryContainer,
+      '@media min-width: 800': {
+        marginBottom: 4,
+      },
+    },
+    headerContainer: {
+      flexDirection: 'row',
+      marginBottom: 6,
+      '@media min-width: 800': {
+        marginBottom: 4,
+      },
+    },
+    leftColumn: {
+      flexDirection: 'row',
+      flexGrow: 9,
+    },
+    rightColumn: {
+      flexDirection: 'column',
+      flexGrow: 1,
+      alignItems: 'flex-end',
+      justifySelf: 'flex-end',
+    },
+    project: {
+      ...globalStyles.title3,
+      marginBottom: 0,
+      color: 'black',
+      textDecoration: 'none',
+    },
+    date: {
+      ...globalStyles.dateText,
+    },
+  });
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        <View style={styles.leftColumn}>
+          <Link href={link} style={styles.project}>{project}</Link>
+        </View>
+        <View style={styles.rightColumn}>
+          <Text style={styles.date}>{date}</Text>
+        </View>
+      </View>
+      <List>
+        {details.map((detail, i) => (
+          <Item key={i}>
+            {detail}
+          </Item>
+        ))}
+      </List>
+    </View>
+  );
+};
+
+const Projects = () => {
+  const styles = StyleSheet.create({
+    container: {
+      marginBottom: 4,
+      flex: 1,
+      '@media max-width: 400': {
+        paddingTop: 10,
+        paddingLeft: 0,
+      },
+    },
+  });
+
+  return (
+    <View style={styles.container}>
+      <Title>Projects</Title>
+      {projectData.map(({ project, link, date, details }) => (
+        <ExperienceEntry
+          project={project}
+          link={link}
+          date={date}
+          details={details}
+          key={project}
+        />
+      ))}
+    </View>
+  );
+}
 
 export default Projects;

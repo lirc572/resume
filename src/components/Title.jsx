@@ -1,17 +1,21 @@
 import React from 'react';
 import pdf from '@react-pdf/renderer';
+import { StylesContext } from '../styles';
 
 const { Text, StyleSheet } = pdf;
 
-const styles = StyleSheet.create({
-  title: {
-    fontFamily: 'Lato Bold',
-    fontSize: 18,
-    marginBottom: 10,
-    textTransform: 'uppercase',
-  },
-});
+const Title = ({ children }) => {
+  const globalStyles = React.useContext(StylesContext);
 
-const Title = ({ children }) => <Text style={styles.title}>{children}</Text>;
+  const styles = StyleSheet.create({
+    title: {
+      ...globalStyles.title2,
+    },
+  });
+
+  return (
+    <Text style={styles.title}>{children}</Text>
+  );
+}
 
 export default Title;

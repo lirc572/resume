@@ -1,40 +1,10 @@
-/* eslint-disable react/no-array-index-key */
-
 import React from 'react';
 import pdf from '@react-pdf/renderer';
-
-const { Text, View, StyleSheet } = pdf;
-
 import Title from './Title';
 import List, { Item } from './List';
+import { StylesContext } from '../styles';
 
-const styles = StyleSheet.create({
-  title: {
-    fontFamily: 'Lato Bold',
-    fontSize: 14,
-    marginBottom: 10,
-    '@media min-width: 800': {
-      marginBottom: 4,
-    },
-  },
-  entryContainer: {
-    marginBottom: 10,
-    '@media min-width: 800': {
-      marginBottom: 0,
-    },
-  },
-});
-
-const SkillEntry = ({ name, skills }) => (
-  <View style={styles.entryContainer}>
-    <Text style={styles.title}>{name}</Text>
-    <List>
-      {skills.map((skill, i) => (
-        <Item key={i}>{skill}</Item>
-      ))}
-    </List>
-  </View>
-);
+const { Text, View, StyleSheet } = pdf;
 
 const skillData = [
   {
@@ -69,17 +39,58 @@ const skillData = [
   },
 ];
 
-const Skills = () => (
-  <View>
-    <Title>Skills</Title>
-    {skillData.map(({ name, skills }) => (
-      <SkillEntry
-        name={name}
-        skills={skills}
-        key={name}
-      />
-    ))}
-  </View>
-);
+const SkillEntry = ({ name, skills }) => {
+  const globalStyles = React.useContext(StylesContext);
+
+  const styles = StyleSheet.create({
+    title: {
+      ...globalStyles.title3,
+      '@media min-width: 800': {
+        marginBottom: 4,
+      },
+    },
+    container: {
+      ...globalStyles.entryContainer,
+      '@media min-width: 800': {
+        marginBottom: 0,
+      },
+    },
+  });
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>{name}</Text>
+      <List>
+        {skills.map((skill, i) => (
+          <Item key={i}>{skill}</Item>
+        ))}
+      </List>
+    </View>
+  );
+}
+
+const Skills = () => {
+  const styles = StyleSheet.create({
+    container: {
+      marginBottom: 2,
+      '@media min-width: 800': {
+        marginBottom: 0,
+      },
+    },
+  });
+
+  return (
+    <View style={styles.container}>
+      <Title>Skills</Title>
+      {skillData.map(({ name, skills }) => (
+        <SkillEntry
+          name={name}
+          skills={skills}
+          key={name}
+        />
+      ))}
+    </View>
+  );
+}
 
 export default Skills;

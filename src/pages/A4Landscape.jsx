@@ -1,6 +1,7 @@
 import React from 'react';
 import pdf from '@react-pdf/renderer';
 import Resume from '../components/Resume';
+import { StylesContext, styles } from '../styles';
 
 const { PDFViewer, Document } = pdf;
 
@@ -15,12 +16,14 @@ export default () => (
   }}>
     <PDFViewer style={{ flex: 1 }}>
       <Document
-        author="Luke Skywalker"
-        keywords="awesome, resume, start wars"
-        subject="The resume of Luke Skywalker"
+        author="Li Ruochen"
+        keywords="lirc572, resume"
+        subject="The resume of Li Ruochen"
         title="Resume"
       >
-        <Resume orientation="landscape" size="A4" />
+        <StylesContext.Provider value={styles}>
+          <Resume orientation="landscape" size="A4" />
+        </StylesContext.Provider>
       </Document>
     </PDFViewer>
   </div>
