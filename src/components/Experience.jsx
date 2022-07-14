@@ -53,6 +53,7 @@ const ExperienceEntry = ({ company, link, details, position, date }) => {
       flexDirection: 'column',
       marginBottom: 6,
       '@media min-width: 800': {
+        flexDirection: 'row',
         marginBottom: 4,
       },
     },

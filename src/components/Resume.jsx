@@ -37,7 +37,12 @@ export default props => {
 
   const styles = StyleSheet.create({
     page: {
-      padding: 20,
+      paddingTop: 20,
+      paddingRight: 20,
+      paddingLeft: 20,
+      '@media min-width: 800': {
+        paddingTop: 10,
+      },
     },
     container: {
       flex: 1,
@@ -49,7 +54,7 @@ export default props => {
     },
     leftColumn: {
       flexDirection: 'column',
-      width: 170,
+      width: 200,
       paddingRight: 10,
       '@media max-width: 400': {
         width: '100%',
