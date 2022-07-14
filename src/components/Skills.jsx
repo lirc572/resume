@@ -23,18 +23,19 @@ const skillData = [
   {
     name: 'Backend',
     skills: [
-      'Node.js, Deno, Flask, Django, WordPress',
-      'MySQL, MongoDB, CouchDB',
+      'Node.js, Deno, Flask, Django',
+      'MySQL, MongoDB, CouchDB, Redis',
       'Nginx, Apache, Caddy',
     ],
   },
   {
     name: 'Others',
     skills: [
-      'Docker, Linux, Git, CMake',
-      'GitHub Actions, Travis CI, CircleCI, Drone.io',
-      'TensorFlow, Keras, Scikit-learn, Pandas, NumPy',
-      'FPGA, ESP32, LVGL',
+      'Docker, Linux, Git, CMake, WordPress',
+      'Crypto++, OpenSSL',
+      'GitHub Actions, Travis CI, CircleCI, DroneCI',
+      'TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, HuggingFace Transformers',
+      'FPGA, ESP32, LVGL, Nvidia Jetson',
     ],
   },
 ];
