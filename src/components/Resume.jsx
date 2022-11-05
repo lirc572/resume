@@ -41,15 +41,15 @@ export default props => {
       paddingRight: 20,
       paddingLeft: 20,
       '@media min-width: 800': {
-        paddingTop: 10,
+        paddingTop: 4,
       },
     },
     container: {
       flex: 1,
       flexDirection: 'row',
       paddingTop: 10,
-      '@media max-width: 400': {
-        flexDirection: 'column',
+      '@media min-width: 800': {
+        paddingTop: 4,
       },
     },
     leftColumn: {
