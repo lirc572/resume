@@ -9,6 +9,15 @@ const linkStyle = {
 export default () => {
   const history = useHistory();
 
+  React.useEffect(() => {
+    try {
+      document.createEvent('TouchEvent');
+      alert('You are likely on a mobile device, which is not supported yet...');
+    } catch (e) {
+      return;
+    }
+  }, []);
+
   return (
     <div style={{
       width: '100vw',
