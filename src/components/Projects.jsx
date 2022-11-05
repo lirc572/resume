@@ -21,7 +21,7 @@ const projectData = [
   },
   {
     project: 'SPA Evaluator',
-    link: 'https://xn--qck0d2a9as9305fp4vawl8a6kza.ml',
+    link: 'https://git.lirc572.com/lirc572/SPA-Eval',
     date: 'Dec 2021',
     details: [
       'A full-stack application that evaluates queries about a code snippet using a static program analyzer, with OCR support',
@@ -39,12 +39,12 @@ const projectData = [
     ],
   },
   {
-    project: 'Covid-Polygraph',
-    link: 'https://github.com/Team2333',
-    date: 'Jan 2022 - Jan 2022',
+    project: 'AS201818',
+    link: 'https://bgp.tools/as/201818',
+    date: 'Oct 2022 - Present',
     details: [
-      'A Covid-19 fact checking tool built on top of BERT and transformers-interpret',
-      'I worked on the NLP model, the frontend, as well as a CI/CD pipeline for the backend',
+      'I am the operator of AS201818, an autonomous system for learning and research purposes',
+      'AS201818 is registered with RIPE NCC, it originates IPv6 address blocks to the Internet',
     ],
   },
 ];
