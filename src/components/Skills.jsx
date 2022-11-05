@@ -33,9 +33,10 @@ const skillData = [
     skills: [
       'Docker, Linux, Git, CMake, WordPress',
       'Crypto++, OpenSSL',
-      'GitHub Actions, Travis CI, CircleCI, DroneCI',
+      'GitHub Actions, Travis CI, Drone CI',
       'TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, HuggingFace Transformers',
       'FPGA, ESP32, LVGL, Nvidia Jetson',
+      'BGP, RPKI, BGPsec, IPv4, IPv6',
     ],
   },
 ];

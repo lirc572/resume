@@ -13,8 +13,8 @@ const experienceData = [
     position: 'Global Software Development Manager',
     date: 'Nov 2020 - Present',
     details: [
-      'Previously worked as a project lead for web development projects using the React Django Stack',
-      'Currently responsible for the overall development life cycle of internal projects, providing technical support, and managing the global software development team',
+      'Responsible for the overall development life cycle of internal projects, providing technical support, code review, and managing the global software development team',
+      'Previously worked as a project lead for web development projects using React/Django Stack and WordPress',
     ],
   },
   {
@@ -24,7 +24,8 @@ const experienceData = [
     date: 'May 2022 - Present',
     details: [
       'Implementation of cryptographic algorithms for cellular network',
-      'Simulation of trust based network',
+      'Implementation of trust models in simulated network environment',
+      'Conducted research on trust models related to network and blockchain',
     ],
   },
   {
