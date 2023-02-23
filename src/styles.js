@@ -32,10 +32,10 @@ export const styles = {
         fontFamily: 'Lato',
     },
     sectionContainer: {
-        marginBottom: 12,
+        marginBottom: 10,
     },
     entryContainer: {
-        marginBottom: 8,
+        marginBottom: 6,
     },
 };
 

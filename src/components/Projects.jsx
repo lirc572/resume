@@ -56,7 +56,7 @@ const ExperienceEntry = ({ project, link, details, date }) => {
     container: {
       ...globalStyles.entryContainer,
       '@media min-width: 800': {
-        marginBottom: 4,
+        marginBottom: 2,
       },
     },
     headerContainer: {
@@ -111,7 +111,7 @@ const ExperienceEntry = ({ project, link, details, date }) => {
 const Projects = () => {
   const styles = StyleSheet.create({
     container: {
-      marginBottom: 4,
+      marginBottom: 0,
       flex: 1,
       '@media max-width: 400': {
         paddingTop: 10,

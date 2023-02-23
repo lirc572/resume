@@ -21,7 +21,7 @@ const experienceData = [
     company: 'Huawei Technologies',
     link: 'https://e.huawei.com/sg/',
     position: 'Trust Modelling Research Intern',
-    date: 'May 2022 - Present',
+    date: 'May 2022 - Dec 2022',
     details: [
       'Implementation of cryptographic algorithms for cellular network',
       'Implementation of trust models in simulated network environment',
@@ -32,10 +32,11 @@ const experienceData = [
     company: 'Temasek Laboratories @ NUS',
     link: 'https://temasek-labs.nus.edu.sg',
     position: 'Student Researcher',
-    date: 'Feb 2021 - May 2022',
+    date: 'Feb 2021 - May 2022, Jan 2023 - Present',
     details: [
-      'Conducted fault tolerant control (FTC) related research, software development and hardware testing on UAV platforms',
-      'Created deep-learning models for digital twins of UAV systems',
+      'Conducted fault tolerant control related research, flight controller programming and testing of UAVs',
+      'Created deep-learning models for fault tolerant control of UAVs deployed on the NVIDIA Jetson platform',
+      'Simplified the workflow of UAV development through containerization',
     ],
   },
 ];
@@ -118,7 +119,7 @@ const ExperienceEntry = ({ company, link, details, position, date }) => {
 const Experience = () => {
   const styles = StyleSheet.create({
     container: {
-      marginBottom: 4,
+      marginBottom: 0,
       '@media max-width: 400': {
         paddingTop: 10,
         paddingLeft: 0,

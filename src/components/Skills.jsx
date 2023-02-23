@@ -10,7 +10,7 @@ const skillData = [
   {
     name: 'Programming Languages',
     skills: [
-      'JavaScript/TypeScript, Python, C/C++, Golang, Java, PHP, Lua',
+      'JavaScript/TypeScript, Python, C/C++, Java, PHP',
     ],
   },
   {
@@ -24,7 +24,7 @@ const skillData = [
     name: 'Backend',
     skills: [
       'Node.js, Deno, Flask, Django',
-      'MySQL, MongoDB, CouchDB, Redis',
+      'MySQL, MongoDB, Redis',
       'Nginx, Apache, Caddy',
     ],
   },
@@ -35,7 +35,7 @@ const skillData = [
       'Crypto++, OpenSSL',
       'GitHub Actions, Travis CI, Drone CI',
       'TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, HuggingFace Transformers',
-      'FPGA, ESP32, LVGL, Nvidia Jetson',
+      'FPGA, ESP32, Nvidia Jetson',
       'BGP, RPKI, BGPsec, IPv4, IPv6',
     ],
   },
