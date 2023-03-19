@@ -2,6 +2,7 @@ import React from 'react';
 import pdf from '@react-pdf/renderer';
 import Header from './Header';
 import Skills from './Skills';
+import Certs from './Certs';
 import Education from './Education';
 import Experience from './Experience';
 import Projects from './Projects';
@@ -54,11 +55,10 @@ export default props => {
     },
     leftColumn: {
       flexDirection: 'column',
-      width: 200,
+      width: '200',
       paddingRight: 10,
-      '@media max-width: 400': {
-        width: '100%',
-        paddingRight: 0,
+      '@media min-width: 800': {
+        width: 300,
       },
     },
     rightColumn: {
@@ -75,6 +75,7 @@ export default props => {
         <View style={styles.leftColumn}>
           <Education />
           <Skills />
+          <Certs />
         </View>
         <View style={styles.rightColumn}>
           <Experience />

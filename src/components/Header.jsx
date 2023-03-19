@@ -70,8 +70,8 @@ export default () => {
       </View>
       <View style={styles.linkColumn}>
         {
-          linkData.map(({ text, url }) => (
-            <Link href={url} style={styles.link}>
+          linkData.map(({ text, url }, i) => (
+            <Link key={i} href={url} style={styles.link}>
               {text}
             </Link>
           ))
