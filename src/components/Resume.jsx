@@ -5,6 +5,7 @@ import Skills from './Skills';
 import Certs from './Certs';
 import Education from './Education';
 import Experience from './Experience';
+import Volunteering from './Volunteering';
 import Projects from './Projects';
 
 const {
@@ -38,11 +39,11 @@ export default props => {
 
   const styles = StyleSheet.create({
     page: {
-      paddingTop: 10,
+      paddingTop: 4,
       paddingRight: 20,
       paddingLeft: 20,
       '@media min-width: 800': {
-        paddingTop: 4,
+        paddingTop: 0,
       },
     },
     container: {
@@ -55,10 +56,10 @@ export default props => {
     },
     leftColumn: {
       flexDirection: 'column',
-      width: '200',
-      paddingRight: 10,
+      width: '180',
+      paddingRight: 2,
       '@media min-width: 800': {
-        width: 300,
+        width: 280,
       },
     },
     rightColumn: {
@@ -79,6 +80,7 @@ export default props => {
         </View>
         <View style={styles.rightColumn}>
           <Experience />
+          <Volunteering />
           <Projects />
         </View>
       </View>

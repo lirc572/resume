@@ -14,10 +14,6 @@ const linkData = [
     url: 'https://www.linkedin.com/in/lirc572/',
   },
   {
-    text: 'Website: lirc572.com',
-    url: 'https://lirc572.com',
-  },
-  {
     text: 'Email: liruochen@u.nus.edu',
     url: 'mailto:liruochen@u.nus.edu',
   },
@@ -66,7 +62,7 @@ export default () => {
     <View style={styles.container}>
       <View style={styles.detailColumn}>
         <Text style={styles.name}>Li Ruochen</Text>
-        <Text style={styles.subtitle}>Final Year Computer Science Undergraduate @ NUS</Text>
+        <Text style={styles.subtitle}>Algorithm Engineer @ Huawei</Text>
       </View>
       <View style={styles.linkColumn}>
         {

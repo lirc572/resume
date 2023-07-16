@@ -56,7 +56,7 @@ const ExperienceEntry = ({ project, link, details, date }) => {
     container: {
       ...globalStyles.entryContainer,
       '@media min-width: 800': {
-        marginBottom: 2,
+        marginBottom: 0,
       },
     },
     headerContainer: {

@@ -6,41 +6,20 @@ import { StylesContext } from '../styles';
 
 const { Link, Text, View, StyleSheet } = pdf;
 
-const experienceData = [
+const volunteeringData = [
   {
-    company: 'Huawei International',
-    link: 'https://e.huawei.com/sg/',
-    position: 'Algorithm Engineer',
-    date: 'Jul 2023 - Present',
+    company: 'BfE',
+    link: 'https://www.bridgesforenterprise.com',
+    position: 'Global Software Development Manager',
+    date: 'Nov 2020 - Present',
     details: [
-      'Algorithm design and implementation on digital trust',
-    ],
-  },
-  {
-    company: 'Huawei International',
-    link: 'https://e.huawei.com/sg/',
-    position: 'Research Intern',
-    date: 'May 2022 - Dec 2022',
-    details: [
-      'Implementation of cryptographic algorithms for cellular network',
-      'Implementation of trust models in simulated network environment',
-      'Conducted research on trust models related to network and blockchain',
-    ],
-  },
-  {
-    company: 'Temasek Laboratories',
-    link: 'https://temasek-labs.nus.edu.sg',
-    position: 'Student Researcher',
-    date: 'Feb 2021 - May 2022',
-    details: [
-      'Conducted fault tolerant control related research, flight controller programming and testing of UAVs',
-      'Created deep-learning models for fault tolerant control of UAVs deployed on the NVIDIA Jetson platform',
-      'Simplified the workflow of UAV development through containerization',
+      'Responsible for the overall development life cycle of internal projects, providing technical support, code review, and managing the global software development team',
+      'Previously worked as a project lead for web development projects using React/Django Stack and WordPress',
     ],
   },
 ];
 
-const ExperienceEntry = ({ company, link, details, position, date }) => {
+const VolunteeringEntry = ({ company, link, details, position, date }) => {
   const globalStyles = React.useContext(StylesContext);
 
   const styles = StyleSheet.create({
@@ -115,7 +94,7 @@ const ExperienceEntry = ({ company, link, details, position, date }) => {
   );
 };
 
-const Experience = () => {
+const Volunteering = () => {
   const styles = StyleSheet.create({
     container: {
       marginBottom: 0,
@@ -128,9 +107,9 @@ const Experience = () => {
 
   return (
     <View style={styles.container}>
-      <Title>Experience</Title>
-      {experienceData.map(({ company, link, date, details, position }) => (
-        <ExperienceEntry
+      <Title>Volunteering</Title>
+      {volunteeringData.map(({ company, link, date, details, position }) => (
+        <VolunteeringEntry
           company={company}
           link={link}
           date={date}
@@ -143,4 +122,4 @@ const Experience = () => {
   );
 }
 
-export default Experience;
+export default Volunteering;

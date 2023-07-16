@@ -5,7 +5,7 @@ export const styles = {
         fontSize: 18,
         fontFamily: 'Lato-Bold',
         textTransform: 'uppercase',
-        marginBottom: 6,
+        marginBottom: 4,
     },
     subtitle: {
         fontSize: 12,

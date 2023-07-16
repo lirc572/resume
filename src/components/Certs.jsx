@@ -42,8 +42,8 @@ const certsData = [
         url: 'https://git.lirc572.com/lirc572/Certificates/raw/branch/master/010102601739809222211409.pdf',
       },
       {
-        text: 'Huawei ICT Competition APAC Cloud Track - 2nd Place',
-        url: 'https://www.linkedin.com/posts/huawei-singapore_ictcompetition-cloud-network-activity-7042383028576288768-D65y',
+        text: 'Huawei ICT Competition Global Final Cloud Track - First Prize',
+        url: 'https://git.lirc572.com/lirc572/Certificates/raw/branch/master/ICT20230402193809235132123317.pdf',
       },
     ],
   },
