@@ -1,72 +1,82 @@
-import React from 'react';
-import pdf from '@react-pdf/renderer';
-import Title from './Title';
-import List, { Item } from './List';
-import { StylesContext } from '../styles';
+import React from "react";
+import pdf from "@react-pdf/renderer";
+import Title from "../common/Title";
+import List, { Item } from "../common/List";
+import { StylesContext } from "../../../styles";
 
 const { Link, Text, View, StyleSheet } = pdf;
 
 const experienceData = [
   {
-    company: 'Huawei International',
-    link: 'https://e.huawei.com/sg/',
-    position: 'Algorithm Engineer',
-    date: 'Jul 2023 - Present',
+    company: "Huawei International",
+    link: "https://e.huawei.com/sg/",
+    position: "Algorithm Engineer",
+    date: "Jul 2023 - Present",
+    details: ["Algorithm design and implementation on digital trust"],
+  },
+  {
+    company: "Huawei International",
+    link: "https://e.huawei.com/sg/",
+    position: "Research Intern",
+    date: "May 2022 - Dec 2022",
     details: [
-      'Algorithm design and implementation on digital trust',
+      "Implementation of cryptographic algorithms for cellular network",
+      "Implementation of trust models in simulated network environment",
+      "Conducted research on trust models related to network and blockchain",
     ],
   },
   {
-    company: 'Huawei International',
-    link: 'https://e.huawei.com/sg/',
-    position: 'Research Intern',
-    date: 'May 2022 - Dec 2022',
+    company: "Temasek Laboratories",
+    link: "https://temasek-labs.nus.edu.sg",
+    position: "Student Researcher",
+    date: "Feb 2021 - May 2022",
     details: [
-      'Implementation of cryptographic algorithms for cellular network',
-      'Implementation of trust models in simulated network environment',
-      'Conducted research on trust models related to network and blockchain',
-    ],
-  },
-  {
-    company: 'Temasek Laboratories',
-    link: 'https://temasek-labs.nus.edu.sg',
-    position: 'Student Researcher',
-    date: 'Feb 2021 - May 2022',
-    details: [
-      'Conducted fault tolerant control related research, flight controller programming and testing of UAVs',
-      'Created deep-learning models for fault tolerant control of UAVs deployed on the NVIDIA Jetson platform',
-      'Simplified the workflow of UAV development through containerization',
+      "Conducted fault tolerant control related research, flight controller programming and testing of UAVs",
+      "Created deep-learning models for fault tolerant control of UAVs deployed on the NVIDIA Jetson platform",
+      "Simplified the workflow of UAV development through containerization",
     ],
   },
 ];
 
-const ExperienceEntry = ({ company, link, details, position, date }) => {
+const ExperienceEntry = ({
+  company,
+  link,
+  details,
+  position,
+  date,
+}: {
+  company: string;
+  link: string;
+  details: string[];
+  position: string;
+  date: string;
+}) => {
   const globalStyles = React.useContext(StylesContext);
 
   const styles = StyleSheet.create({
     container: {
       ...globalStyles.entryContainer,
-      '@media min-width: 800': {
+      "@media min-width: 800": {
         marginBottom: 4,
       },
     },
     headerContainer: {
-      flexDirection: 'row',
+      flexDirection: "row",
       marginBottom: 6,
-      '@media min-width: 800': {
-        flexDirection: 'row',
+      "@media min-width: 800": {
+        flexDirection: "row",
         marginBottom: 4,
       },
     },
     leftColumn: {
-      flexDirection: 'row',
+      flexDirection: "row",
       flexGrow: 9,
     },
     rightColumn: {
-      flexDirection: 'column',
+      flexDirection: "column",
       flexGrow: 1,
-      alignItems: 'flex-end',
-      justifySelf: 'flex-end',
+      alignItems: "flex-end",
+      justifySelf: "flex-end",
     },
     position: {
       ...globalStyles.title3,
@@ -75,9 +85,9 @@ const ExperienceEntry = ({ company, link, details, position, date }) => {
     company: {
       ...globalStyles.title3,
       marginBottom: 0,
-      fontFamily: 'Lato-Italic',
-      color: 'black',
-      textDecoration: 'none',
+      fontFamily: "Lato-Italic",
+      color: "black",
+      textDecoration: "none",
     },
     positionCompanySeparator: {
       ...globalStyles.title3,
@@ -96,7 +106,9 @@ const ExperienceEntry = ({ company, link, details, position, date }) => {
         <View style={styles.leftColumn}>
           <Text style={styles.position}>{position}</Text>
           <Text style={styles.positionCompanySeparator}>@</Text>
-          <Link href={link} style={styles.company}>{company}</Link>
+          <Link href={link} style={styles.company}>
+            {company}
+          </Link>
         </View>
         <View style={styles.rightColumn}>
           <Text style={styles.date}>{date}</Text>
@@ -105,13 +117,11 @@ const ExperienceEntry = ({ company, link, details, position, date }) => {
       <View>
         <List>
           {details.map((detail, i) => (
-            <Item key={i}>
-              {detail}
-            </Item>
+            <Item key={i}>{detail}</Item>
           ))}
         </List>
       </View>
-    </View >
+    </View>
   );
 };
 
@@ -119,7 +129,7 @@ const Experience = () => {
   const styles = StyleSheet.create({
     container: {
       marginBottom: 0,
-      '@media max-width: 400': {
+      "@media max-width: 400": {
         paddingTop: 10,
         paddingLeft: 0,
       },
@@ -141,6 +151,6 @@ const Experience = () => {
       ))}
     </View>
   );
-}
+};
 
 export default Experience;
