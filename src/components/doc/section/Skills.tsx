@@ -44,13 +44,13 @@ const SkillEntry = ({ name, skills }: { name: string; skills: string[] }) => {
   const styles = StyleSheet.create({
     title: {
       ...globalStyles.title3,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         marginBottom: 4,
       },
     },
     container: {
       ...globalStyles.entryContainer,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         marginBottom: 0,
       },
     },

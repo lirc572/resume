@@ -1,8 +1,6 @@
 import React from "react";
-import pdf from "@react-pdf/renderer";
+import { Link, Text, View, StyleSheet } from "@react-pdf/renderer";
 import { StylesContext } from "../../styles";
-
-const { Link, Text, View, StyleSheet } = pdf;
 
 const linkData = [
   {

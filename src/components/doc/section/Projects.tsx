@@ -63,14 +63,14 @@ const ExperienceEntry = ({
   const styles = StyleSheet.create({
     container: {
       ...globalStyles.entryContainer,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         marginBottom: 0,
       },
     },
     headerContainer: {
       flexDirection: "row",
       marginBottom: 6,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         marginBottom: 4,
       },
     },
@@ -121,10 +121,6 @@ const Projects = () => {
     container: {
       marginBottom: 0,
       flex: 1,
-      "@media max-width: 400": {
-        paddingTop: 10,
-        paddingLeft: 0,
-      },
     },
   });
 

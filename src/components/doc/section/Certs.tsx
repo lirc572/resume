@@ -1,5 +1,5 @@
 import React from "react";
-import pdf from "@react-pdf/renderer";
+import pdf, { Link } from "@react-pdf/renderer";
 import Title from "../common/Title";
 import List, { Item } from "../common/List";
 import { StylesContext } from "../../../styles";
@@ -61,13 +61,13 @@ const CertsYear = ({
   const styles = StyleSheet.create({
     title: {
       ...globalStyles.title3,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         marginBottom: 4,
       },
     },
     container: {
       ...globalStyles.entryContainer,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         marginBottom: 0,
       },
     },
@@ -85,9 +85,9 @@ const CertsYear = ({
         {certs.map(({ text, url }, i) => (
           <Item key={i}>
             {url ? (
-              <Text href={url} style={styles.link}>
+              <Link href={url} style={styles.link}>
                 {text}
-              </Text>
+              </Link>
             ) : (
               <Text style={styles.link}>{text}</Text>
             )}

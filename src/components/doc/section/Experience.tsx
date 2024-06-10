@@ -56,14 +56,14 @@ const ExperienceEntry = ({
   const styles = StyleSheet.create({
     container: {
       ...globalStyles.entryContainer,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         marginBottom: 4,
       },
     },
     headerContainer: {
       flexDirection: "row",
       marginBottom: 6,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         flexDirection: "row",
         marginBottom: 4,
       },
@@ -129,10 +129,6 @@ const Experience = () => {
   const styles = StyleSheet.create({
     container: {
       marginBottom: 0,
-      "@media max-width: 400": {
-        paddingTop: 10,
-        paddingLeft: 0,
-      },
     },
   });
 

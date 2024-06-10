@@ -41,7 +41,7 @@ export default function Component(
       paddingTop: 4,
       paddingRight: 20,
       paddingLeft: 20,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         paddingTop: 0,
       },
     },
@@ -49,7 +49,7 @@ export default function Component(
       flex: 1,
       flexDirection: "row",
       paddingTop: 6,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         paddingTop: 4,
       },
     },
@@ -57,7 +57,7 @@ export default function Component(
       flexDirection: "column",
       width: "180",
       paddingRight: 2,
-      "@media min-width: 800": {
+      "@media orientation: landscape": {
         width: 280,
       },
     },

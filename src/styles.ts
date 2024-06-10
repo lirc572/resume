@@ -1,6 +1,7 @@
 import React from "react";
+import type { Styles } from "@react-pdf/renderer";
 
-export const styles = {
+export const styles: Styles = {
   title1: {
     fontSize: 18,
     fontFamily: "Lato-Bold",
@@ -17,7 +18,8 @@ export const styles = {
     fontFamily: "Lato-Bold",
     textTransform: "uppercase",
     marginBottom: 6,
-    "@media min-width: 800": {
+    // @ts-expect-error: media query not defined in Style
+    "@media orientation: landscape": {
       marginBottom: 0,
     },
   },
@@ -25,27 +27,31 @@ export const styles = {
     fontSize: 12,
     fontFamily: "Lato-Bold",
     marginBottom: 6,
-    "@media min-width: 800": {
+    // @ts-expect-error: media query not defined in Style
+    "@media orientation: landscape": {
       marginBottom: 0,
     },
   },
   dateText: {
     fontSize: 11,
     fontFamily: "Lato-Italic",
-    "@media min-width: 800": {
+    // @ts-expect-error: media query not defined in Style
+    "@media orientation: landscape": {
       fontSize: 10,
     },
   },
   bodyText: {
     fontSize: 11,
     fontFamily: "Lato",
-    "@media min-width: 800": {
+    // @ts-expect-error: media query not defined in Style
+    "@media orientation: landscape": {
       fontSize: 10,
     },
   },
   sectionContainer: {
     marginBottom: 10,
-    "@media min-width: 800": {
+    // @ts-expect-error: media query not defined in Style
+    "@media orientation: landscape": {
       marginBottom: 4,
     },
   },
