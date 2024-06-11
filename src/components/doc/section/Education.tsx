@@ -1,12 +1,12 @@
-import React from 'react';
-import pdf from '@react-pdf/renderer';
-import { StylesContext } from '../styles';
+import React from "react";
+import pdf from "@react-pdf/renderer";
+import { StylesContext } from "../../../styles";
 
 const { Text, View, StyleSheet } = pdf;
 
-import Title from './Title';
+import Title from "../common/Title";
 
-export default () => {
+export default function Component() {
   const globalStyles = React.useContext(StylesContext);
 
   const styles = StyleSheet.create({
@@ -18,7 +18,7 @@ export default () => {
     },
     candidate: {
       ...globalStyles.dateText,
-      fontFamily: 'Lato-Italic',
+      fontFamily: "Lato-Italic",
     },
     degree: {
       ...globalStyles.bodyText,
